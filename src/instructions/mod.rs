@@ -78,7 +78,7 @@ impl Encode for [Instruction] {
             instr.encode(w)?;
         }
         depth_tracker.assert_end()?;
-        OP_CODE_END.encode(w)
+        0xFF.encode(w)
     }
 }
 
